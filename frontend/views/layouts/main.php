@@ -28,25 +28,68 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'Dirección de Ecología',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-    ];
+    $menuItems = [];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => 'Inicio', 'url' => ['/site/index']];
+        $menuItems[] = [
+          'label' => 'Departamentos',
+          'items' => [
+            ['label' => 'Educación Ambiental', 'url' => ['/']],
+            ['label' => 'Inspecciones y Denuncias', 'url' => ['/']],
+            ['label' => 'Planeación y Gestión Ambiental', 'url' => ['#']],
+          ],
+        ];
+        $menuItems[] = [
+          'label' => 'Trámites',
+          'items' =>[
+            ['label' => 'Informe Preventivo', 'url' => ['/informe-preventivo/create']],
+            ['label' => 'Emisión de ruido en la vía pública', 'url' => ['/']],
+            ['label' => 'Antenas de telecomunicación', 'url' => ['#']],
+            ['label' => 'Comercios y Servicios', 'url' => ['#']],
+            ['label' => 'Demolición', 'url' => ['#']],
+            ['label' => 'Estaciones de carburación', 'url' => ['#']],
+            ['label' => 'Movimiento de tierra', 'url' => ['#']],
+            ['label' => 'Obra civil para casa habitación', 'url' => ['#']],
+            ['label' => 'Remoción o poda de árboles', 'url' => ['#']],
+            ['label' => 'Transporte agua residual', 'url' => ['#']],
+          ],
+        ];
+        $menuItems[] = ['label' => 'Reglamento', 'url' => ['/site/rules']];
+        $menuItems[] = ['label' => 'Quienes somos', 'url' => ['/site/about']];
+        //$menuItems[] = ['label' => 'Contáctenos', 'url' => ['/site/contact']];
+        $menuItems[] = ['label' => 'Registrarse', 'url' => ['/site/signup']];
+        $menuItems[] = ['label' => 'Iniciar sesión', 'url' => ['/site/login']];
     } else {
+        $menuItems[] = ['label' => 'Inicio', 'url' => ['/site/index']];
+        $menuItems[] = ['label' => 'Departamentos', 'url' => ['#']];
+        $menuItems[] = [
+          'label' => 'Trámites',
+          'items' =>[
+            ['label' => 'Informe Preventivo', 'url' => ['/informe-preventivo']],
+            ['label' => 'Emisión de ruido en la vía pública', 'url' => ['#']],
+            ['label' => 'Antenas de telecomunicación', 'url' => ['#']],
+            ['label' => 'Comercios y Servicios', 'url' => ['#']],
+            ['label' => 'Demolición', 'url' => ['#']],
+            ['label' => 'Estaciones de carburación', 'url' => ['#']],
+            ['label' => 'Movimiento de tierra', 'url' => ['#']],
+            ['label' => 'Obra civil para casa habitación', 'url' => ['#']],
+            ['label' => 'Remoción o poda de árboles', 'url' => ['#']],
+            ['label' => 'Transporte agua residual', 'url' => ['#']],
+          ],
+        ];
+        $menuItems[] = ['label' => 'Reglamento', 'url' => ['#']];
+        $menuItems[] = ['label' => 'Quienes somos', 'url' => ['/site/about']];
+        //$menuItems[] = ['label' => 'Contáctenos', 'url' => ['/site/contact']];
         $menuItems[] = '<li>'
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
+                'Cerrar sesión (' . Yii::$app->user->identity->username . ')',
                 ['class' => 'btn btn-link']
             )
             . Html::endForm()
@@ -58,7 +101,6 @@ AppAsset::register($this);
     ]);
     NavBar::end();
     ?>
-
     <div class="container">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
@@ -70,9 +112,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-left">Carretera Transpeninsular. #6500 A, Ex Ejido Chapultepec C.P. 22785.<br />XXI Ayuntamiento Ensenada – Algunos derechos reservados &copy; 2016</p>
     </div>
 </footer>
 

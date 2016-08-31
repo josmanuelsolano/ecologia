@@ -5,48 +5,55 @@
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-        </div>
-
-    </div>
+  <?php
+  echo yii\bootstrap\Carousel::widget([
+  'items' => [
+      [
+          'content' => '<img src="/ecologia/frontend/web/img/img1.jpg" height="600px" width="1200px"/>',
+          'caption' => '<h3 class="text-left">Feria de servicios, Cañón Buena Vista</h3><p class="text-left">El pasado 3 de febrero se realizo el evento de feria de servicios...</p>',
+          'options' => [
+            'style' => [
+              'width: 1200px; height: 600px;'
+            ],
+          ],
+      ],
+      [
+          'content' => '<img src="/ecologia/frontend/web/img/img2.jpg" height="600px" width="1200px"/>',
+          'caption' => '<h3 class="text-left">Jornada "Por mi comunidad"</h3><p class="text-left">El día 13 de enero del presente año se impartió un taller...</p>',
+          'options' => [
+            'style' => [
+              'width: 1200px; height: 600px;'
+            ],
+          ],
+      ],
+      [
+          'content' => '<img src="/ecologia/frontend/web/img/img3.jpg" height="600px" width="1200px"/>',
+          'caption' => '<h3 class="text-left">Firma del convenio con CANIRAC y Negocio ECO Responsable</h3><p class="text-left">El pasado 5 de noviembre del 2015 , se llevo a cabo la firma del convenio..,</p>',
+          'options' => [
+            'style' => [
+              'width: 1200px; height: 600px;'
+            ],
+          ],
+      ],
+      [
+          'content' => '<img src="/ecologia/frontend/web/img/img4.jpg" height="600px" width="1200px"/>',
+          'caption' => '<h3 class="text-left">“El Cielo”, primer Negocio Eco Responsable.</h3><p class="text-left">El día 30 de agosto se llevo a cabo la firma del primer certificado...</p>',
+          'options' => [
+            'style' => [
+              'width: 1200px; height: 600px;'
+            ],
+          ],
+      ],
+      [
+          'content' => '<img src="/ecologia/frontend/web/img/img5.jpg" height="600px" width="1200px"/>',
+          'caption' => '<h3 class="text-left">Reforestación y entrega de contenedores de basura</h3><p class="text-left">Con apoyo de CEMEX S.A.B. de C.V. de Ensenada, se instaló una rampa de acceso...</p>',
+          'options' => [
+            'style' => [
+              'width: 1200px; height: 600px;'
+            ],
+          ],
+      ],
+  ]
+]);
+   ?>
 </div>
