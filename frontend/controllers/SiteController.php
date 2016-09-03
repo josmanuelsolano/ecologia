@@ -113,6 +113,11 @@ class SiteController extends Controller
         return $this->render('rules');
     }
 
+    public function actionDenuncias()
+    {
+        return $this->render('denuncias');
+    }
+
     /**
      * Displays contact page.
      *

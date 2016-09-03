@@ -41,7 +41,7 @@ AppAsset::register($this);
           'label' => 'Departamentos',
           'items' => [
             ['label' => 'Educación Ambiental', 'url' => ['/']],
-            ['label' => 'Inspecciones y Denuncias', 'url' => ['/']],
+            ['label' => 'Inspecciones y Denuncias', 'url' => ['/site/denuncias']],
             ['label' => 'Planeación y Gestión Ambiental', 'url' => ['#']],
           ],
         ];
@@ -50,14 +50,14 @@ AppAsset::register($this);
           'items' =>[
             ['label' => 'Informe Preventivo', 'url' => ['/informe-preventivo/create']],
             ['label' => 'Emisión de ruido en la vía pública', 'url' => ['/']],
-            ['label' => 'Antenas de telecomunicación', 'url' => ['#']],
-            ['label' => 'Comercios y Servicios', 'url' => ['#']],
-            ['label' => 'Demolición', 'url' => ['#']],
-            ['label' => 'Estaciones de carburación', 'url' => ['#']],
-            ['label' => 'Movimiento de tierra', 'url' => ['#']],
-            ['label' => 'Obra civil para casa habitación', 'url' => ['#']],
-            ['label' => 'Remoción o poda de árboles', 'url' => ['#']],
-            ['label' => 'Transporte agua residual', 'url' => ['#']],
+            ['label' => 'Antenas de telecomunicación', 'url' => ['/']],
+            ['label' => 'Comercios y Servicios', 'url' => ['/']],
+            ['label' => 'Demolición', 'url' => ['/']],
+            ['label' => 'Estaciones de carburación', 'url' => ['/']],
+            ['label' => 'Movimiento de tierra', 'url' => ['/']],
+            ['label' => 'Obra civil para casa habitación', 'url' => ['/']],
+            ['label' => 'Remoción o poda de árboles', 'url' => ['/']],
+            ['label' => 'Transporte agua residual', 'url' => ['/']],
           ],
         ];
         $menuItems[] = ['label' => 'Reglamento', 'url' => ['/site/rules']];
