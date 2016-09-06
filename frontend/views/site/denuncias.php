@@ -18,8 +18,9 @@
 <script>
 
 var map;
+var allComplaints = [];
 var markers = [];
-var complaints = [
+var complaintsGreen = [
   {type: 1, stringContent:'<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
@@ -46,7 +47,10 @@ var complaints = [
       '<p><b>Escurrimiento de aguas residuales:</b><br>En este espacio estaría la información '+
       'que se requiera mostrar.</p>'+
       '</div>'+
-      '</div>', lat: 31.850461069559795, lng: -116.58389657735825},
+      '</div>', lat: 31.850461069559795, lng: -116.58389657735825}
+];
+
+var complaintsRed = [
   {type: 2, stringContent:'<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
@@ -73,7 +77,10 @@ var complaints = [
       '<p><b>Escurrimiento de aguas residuales:</b><br>En este espacio estaría la información '+
       'que se requiera mostrar.</p>'+
       '</div>'+
-      '</div>', lat: 31.84735172422542, lng: -116.58767849206924},
+      '</div>', lat: 31.84735172422542, lng: -116.58767849206924}
+];
+
+var complaintsYellow = [
   {type: 3, stringContent:'<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
@@ -100,7 +107,10 @@ var complaints = [
       '<p><b>Escurrimiento de aguas residuales:</b><br>En este espacio estaría la información '+
       'que se requiera mostrar.</p>'+
       '</div>'+
-      '</div>', lat: 31.705407785561075, lng: -116.5550708770752},
+      '</div>', lat: 31.705407785561075, lng: -116.5550708770752}
+];
+
+var complaintsBlue = [
   {type: 4, stringContent:'<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
@@ -145,19 +155,43 @@ function initMap(){
     google.maps.event.addListener(window, 'load', initMap);
 }
 
-function drop(typeComplaint) {
+function dropGreen(typeComplaint) {
   clearMarkers();
-  for (var i = 0; i < complaints.length; i++) {
-    if (complaints[i].type == typeComplaint) {
-      addMarkers(complaints[i], i * 100, i);
-    }
+  for (var i = 0; i < complaintsGreen.length; i++) {
+    addMarkers(complaintsGreen[i], i * 100, i);
+  }
+}
+
+function dropRed(typeComplaint) {
+  clearMarkers();
+  for (var i = 0; i < complaintsRed.length; i++) {
+    addMarkers(complaintsRed[i], i * 100, i);
+  }
+}
+
+function dropYellow(typeComplaint) {
+  clearMarkers();
+  for (var i = 0; i < complaintsYellow.length; i++) {
+    addMarkers(complaintsYellow[i], i * 100, i);
+  }
+}
+
+function dropBlue(typeComplaint) {
+  clearMarkers();
+  for (var i = 0; i < complaintsBlue.length; i++) {
+    addMarkers(complaintsBlue[i], i * 100, i);
   }
 }
 
 function dropAll() {
   clearMarkers();
-  for (var i = 0; i < complaints.length; i++) {
-    addMarkers(complaints[i], i * 50 ,i);
+  allComplaints = allComplaints.concat(complaintsGreen);
+  allComplaints = allComplaints.concat(complaintsRed);
+  allComplaints = allComplaints.concat(complaintsYellow);
+  allComplaints = allComplaints.concat(complaintsBlue);
+  console.log(allComplaints);
+  for (var i = 0; i < allComplaints.length; i++) {
+    addMarkers(allComplaints[i], i * 50 ,i);
   }
 }
 
@@ -212,10 +246,10 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCna3_Qer57d2B1FFuESTyis_V
         <div class="panel-heading">
           Denuncias Actuales
           <div id="floating-panel">
-            <button type="button" class="btn btn-success" onclick="drop(1)" data-toggle="tooltip" data-placement="bottom" title="Escurrimiento de aguas residuales"></span>Escurrimientos</button>
-            <button type="button" class="btn btn-danger" onclick="drop(2)" data-toggle="tooltip" data-placement="bottom" title="Basureros clandestinos"></span>Basureros</button>
-            <button type="button" class="btn btn-warning" onclick="drop(3)" data-toggle="tooltip" data-placement="bottom" title="Tiraderos de escombro"></span>Tiraderos</button>
-            <button type="button" class="btn btn-info" onclick="drop(4)" data-toggle="tooltip" data-placement="bottom" title="Problemas con mascotas"></span>Mascotas</button>
+            <button type="button" class="btn btn-success" onclick="dropGreen(1)" data-toggle="tooltip" data-placement="bottom" title="Escurrimiento de aguas residuales"></span>Escurrimientos</button>
+            <button type="button" class="btn btn-danger" onclick="dropRed(2)" data-toggle="tooltip" data-placement="bottom" title="Basureros clandestinos"></span>Basureros</button>
+            <button type="button" class="btn btn-warning" onclick="dropYellow(3)" data-toggle="tooltip" data-placement="bottom" title="Tiraderos de escombro"></span>Tiraderos</button>
+            <button type="button" class="btn btn-info" onclick="dropBlue(4)" data-toggle="tooltip" data-placement="bottom" title="Problemas con mascotas"></span>Mascotas</button>
             <button type="button" class="btn btn-default" onclick="dropAll()"></span>Todas las Denuncias</button>
             <button type="button" class="btn btn-default" onclick="initMap()"></span>Reiniciar</button>
           </div>
