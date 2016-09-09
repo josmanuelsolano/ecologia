@@ -2,7 +2,7 @@
     #floating-panel {
     position: absolute;
     top: 10%;
-    right: 5%;
+    right: 3.5%;
     z-index: 5;
     background-color: transparent;
     border: transparent;
@@ -24,28 +24,31 @@ var complaintsGreen = [
   {type: 1, stringContent:'<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h2 id="firstHeading" class="firstHeading">Denuncia  Verde Folio: E/943</h2>'+
+      '<h2 id="firstHeading" class="firstHeading">Denuncia Folio: E/943</h2>'+
       '<div id="bodyContent">'+
       '<p><b>Escurrimiento de aguas residuales:</b><br>En este espacio estaría la información '+
-      'que se requiera mostrar.</p>'+
+      'que se requiera mostrar.</p><br>'+
+      '<p><b>estado:</b><font color="red">Sin atender</font></p>'+
       '</div>'+
       '</div>', lat: 31.808016802157262, lng: -116.59575998783112},
   {type: 1, stringContent:'<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h2 id="firstHeading" class="firstHeading">Denuncia  Verde Folio: E/943</h2>'+
+      '<h2 id="firstHeading" class="firstHeading">Denuncia Folio: E/943</h2>'+
       '<div id="bodyContent">'+
       '<p><b>Escurrimiento de aguas residuales:</b><br>En este espacio estaría la información '+
-      'que se requiera mostrar.</p>'+
+      'que se requiera mostrar.</p><br>'+
+      '<p><b>estado:</b><font color="green">Atendida</font></p>'+
       '</div>'+
       '</div>', lat: 31.8715696243196, lng: -116.61510407924652},
   {type: 1, stringContent:'<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h2 id="firstHeading" class="firstHeading">Denuncia  Verde Folio: E/943</h2>'+
+      '<h2 id="firstHeading" class="firstHeading">Denuncia Folio: E/943</h2>'+
       '<div id="bodyContent">'+
       '<p><b>Escurrimiento de aguas residuales:</b><br>En este espacio estaría la información '+
-      'que se requiera mostrar.</p>'+
+      'que se requiera mostrar.</p><br>'+
+      '<p><b>estado:</b><font color="red">Sin atender</font></p>'+
       '</div>'+
       '</div>', lat: 31.850461069559795, lng: -116.58389657735825}
 ];
@@ -54,28 +57,31 @@ var complaintsRed = [
   {type: 2, stringContent:'<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h2 id="firstHeading" class="firstHeading">Denuncia  Rojo Folio: E/943</h2>'+
+      '<h2 id="firstHeading" class="firstHeading">Denuncia Folio: E/943</h2>'+
       '<div id="bodyContent">'+
-      '<p><b>Escurrimiento de aguas residuales:</b><br>En este espacio estaría la información '+
-      'que se requiera mostrar.</p>'+
+      '<p><b>Basureros Clandestinos:</b><br>En este espacio estaría la información '+
+      'que se requiera mostrar.</p><br>'+
+      '<p><b>estado:</b><font color="green">Atendida</font></p>'+
       '</div>'+
       '</div>', lat: 31.81462796954989, lng: -116.59309923648834},
   {type: 2, stringContent:'<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h2 id="firstHeading" class="firstHeading">Denuncia  Rojo Folio: E/943</h2>'+
+      '<h2 id="firstHeading" class="firstHeading">Denuncia Folio: E/943</h2>'+
       '<div id="bodyContent">'+
-      '<p><b>Escurrimiento de aguas residuales:</b><br>En este espacio estaría la información '+
-      'que se requiera mostrar.</p>'+
+      '<p><b>Basureros Clandestinos:</b><br>En este espacio estaría la información '+
+      'que se requiera mostrar.</p><br>'+
+      '<p><b>estado:</b><font color="red">Sin atender</font></p>'+
       '</div>'+
       '</div>', lat: 31.871692034684614, lng: -116.60086691379547},
   {type: 2, stringContent:'<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h2 id="firstHeading" class="firstHeading">Denuncia  Rojo Folio: E/943</h2>'+
+      '<h2 id="firstHeading" class="firstHeading">Denuncia Folio: E/943</h2>'+
       '<div id="bodyContent">'+
-      '<p><b>Escurrimiento de aguas residuales:</b><br>En este espacio estaría la información '+
-      'que se requiera mostrar.</p>'+
+      '<p><b>Basureros Clandestinos:</b><br>En este espacio estaría la información '+
+      'que se requiera mostrar.</p><br>'+
+      '<p><b>estado:</b><font color="green">Atendida</font></p>'+
       '</div>'+
       '</div>', lat: 31.84735172422542, lng: -116.58767849206924}
 ];
@@ -84,28 +90,31 @@ var complaintsYellow = [
   {type: 3, stringContent:'<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h2 id="firstHeading" class="firstHeading">Denuncia Amarillo Folio: E/943</h2>'+
+      '<h2 id="firstHeading" class="firstHeading">Denuncia Folio: E/943</h2>'+
       '<div id="bodyContent">'+
-      '<p><b>Escurrimiento de aguas residuales:</b><br>En este espacio estaría la información '+
-      'que se requiera mostrar.</p>'+
+      '<p><b>Tiraderos de escombro:</b><br>En este espacio estaría la información '+
+      'que se requiera mostrar.</p><br>'+
+      '<p><b>estado:</b><font color="red">Sin atender</font></p>'+
       '</div>'+
       '</div>', lat: 31.866634418394796, lng: -116.65856391191483},
   {type: 3, stringContent:'<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h2 id="firstHeading" class="firstHeading">Denuncia Amarillo Folio: E/943</h2>'+
+      '<h2 id="firstHeading" class="firstHeading">Denuncia Folio: E/943</h2>'+
       '<div id="bodyContent">'+
-      '<p><b>Escurrimiento de aguas residuales:</b><br>En este espacio estaría la información '+
-      'que se requiera mostrar.</p>'+
+      '<p><b>Tiraderos de escombro:</b><br>En este espacio estaría la información '+
+      'que se requiera mostrar.</p><br>'+
+      '<p><b>estado:</b><font color="green">Atendida</font></p>'+
       '</div>'+
       '</div>', lat: 31.77082238777463, lng: -116.58106952905655},
   {type: 3, stringContent:'<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h2 id="firstHeading" class="firstHeading">Denuncia Amarillo Folio: E/943</h2>'+
+      '<h2 id="firstHeading" class="firstHeading">Denuncia Folio: E/943</h2>'+
       '<div id="bodyContent">'+
-      '<p><b>Escurrimiento de aguas residuales:</b><br>En este espacio estaría la información '+
-      'que se requiera mostrar.</p>'+
+      '<p><b>Tiraderos de escombro:</b><br>En este espacio estaría la información '+
+      'que se requiera mostrar.</p><br>'+
+      '<p><b>estado:</b><font color="red">Sin atender</font></p>'+
       '</div>'+
       '</div>', lat: 31.705407785561075, lng: -116.5550708770752}
 ];
@@ -114,28 +123,31 @@ var complaintsBlue = [
   {type: 4, stringContent:'<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h2 id="firstHeading" class="firstHeading">Denuncia Azul Folio: E/943</h2>'+
+      '<h2 id="firstHeading" class="firstHeading">Denuncia Folio: E/943</h2>'+
       '<div id="bodyContent">'+
-      '<p><b>Escurrimiento de aguas residuales:</b><br>En este espacio estaría la información '+
-      'que se requiera mostrar.</p>'+
+      '<p><b>Problemas con mascotas:</b><br>En este espacio estaría la información '+
+      'que se requiera mostrar.</p><br>'+
+      '<p><b>estado:</b><font color="green">Atendida</font></p>'+
       '</div>'+
       '</div>', lat: 31.851372909505116, lng: -116.5740555524826},
   {type: 4, stringContent:'<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h2 id="firstHeading" class="firstHeading">Denuncia Azul Folio: E/943</h2>'+
+      '<h2 id="firstHeading" class="firstHeading">Denuncia Folio: E/943</h2>'+
       '<div id="bodyContent">'+
-      '<p><b>Escurrimiento de aguas residuales:</b><br>En este espacio estaría la información '+
-      'que se requiera mostrar.</p>'+
+      '<p><b>Problemas con mascotas:</b><br>En este espacio estaría la información '+
+      'que se requiera mostrar.</p><br>'+
+      '<p><b>estado:</b><font color="red">Sin atender</font></p>'+
       '</div>'+
       '</div>', lat: 31.830662576557447, lng: -116.59556955099106},
   {type: 4, stringContent:'<div id="content">'+
       '<div id="siteNotice">'+
       '</div>'+
-      '<h2 id="firstHeading" class="firstHeading">Denuncia Azul Folio: E/943</h2>'+
+      '<h2 id="firstHeading" class="firstHeading">Denuncia Folio: E/943</h2>'+
       '<div id="bodyContent">'+
-      '<p><b>Escurrimiento de aguas residuales:</b><br>En este espacio estaría la información '+
-      'que se requiera mostrar.</p>'+
+      '<p><b>Problemas con mascotas:</b><br>En este espacio estaría la información '+
+      'que se requiera mostrar.</p><br>'+
+      '<p><b>estado:</b><font color="green">Atendida</font></p>'+
       '</div>'+
       '</div>', lat: 31.73952990373818, lng: -116.56686455011368}
 ];
@@ -153,33 +165,35 @@ function initMap(){
     map = new google.maps.Map(document.getElementById("map"), myProp);
 
     google.maps.event.addListener(window, 'load', initMap);
+
+    dropAll();
 }
 
 function dropGreen(typeComplaint) {
   clearMarkers();
   for (var i = 0; i < complaintsGreen.length; i++) {
-    addMarkers(complaintsGreen[i], i * 100, i);
+    addMarkers(complaintsGreen[i], i * 50, i);
   }
 }
 
 function dropRed(typeComplaint) {
   clearMarkers();
   for (var i = 0; i < complaintsRed.length; i++) {
-    addMarkers(complaintsRed[i], i * 100, i);
+    addMarkers(complaintsRed[i], i * 50, i);
   }
 }
 
 function dropYellow(typeComplaint) {
   clearMarkers();
   for (var i = 0; i < complaintsYellow.length; i++) {
-    addMarkers(complaintsYellow[i], i * 100, i);
+    addMarkers(complaintsYellow[i], i * 50, i);
   }
 }
 
 function dropBlue(typeComplaint) {
   clearMarkers();
   for (var i = 0; i < complaintsBlue.length; i++) {
-    addMarkers(complaintsBlue[i], i * 100, i);
+    addMarkers(complaintsBlue[i], i * 50, i);
   }
 }
 
@@ -234,7 +248,6 @@ function clearMarkers() {
   }
   markers = [];
 }
-
 </script>
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCna3_Qer57d2B1FFuESTyis_V_h6j8eo0&callback=initMap">
@@ -246,12 +259,11 @@ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCna3_Qer57d2B1FFuESTyis_V
         <div class="panel-heading">
           Denuncias Actuales
           <div id="floating-panel">
-            <button type="button" class="btn btn-success" onclick="dropGreen(1)" data-toggle="tooltip" data-placement="bottom" title="Escurrimiento de aguas residuales"></span>Escurrimientos</button>
-            <button type="button" class="btn btn-danger" onclick="dropRed(2)" data-toggle="tooltip" data-placement="bottom" title="Basureros clandestinos"></span>Basureros</button>
-            <button type="button" class="btn btn-warning" onclick="dropYellow(3)" data-toggle="tooltip" data-placement="bottom" title="Tiraderos de escombro"></span>Tiraderos</button>
-            <button type="button" class="btn btn-info" onclick="dropBlue(4)" data-toggle="tooltip" data-placement="bottom" title="Problemas con mascotas"></span>Mascotas</button>
-            <button type="button" class="btn btn-default" onclick="dropAll()"></span>Todas las Denuncias</button>
-            <button type="button" class="btn btn-default" onclick="initMap()"></span>Reiniciar</button>
+            <button type="button" class="btn btn-success" onclick="dropGreen(1)" data-toggle="tooltip" data-placement="bottom" title="Escurrimiento de aguas residuales">Escurrimientos</button>
+            <button type="button" class="btn btn-danger" onclick="dropRed(2)" data-toggle="tooltip" data-placement="bottom" title="Basureros clandestinos">Basureros</button>
+            <button type="button" class="btn btn-warning" onclick="dropYellow(3)" data-toggle="tooltip" data-placement="bottom" title="Tiraderos de escombro">Tiraderos</button>
+            <button type="button" class="btn btn-info" onclick="dropBlue(4)" data-toggle="tooltip" data-placement="bottom" title="Problemas con mascotas">Mascotas</button>
+            <button type="button" class="btn btn-default" onclick="dropAll()">Todas</button>
           </div>
         </div>
         <div id="map" class="panel-body" style="height:600px;">
