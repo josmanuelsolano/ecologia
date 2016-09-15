@@ -39,12 +39,6 @@ return [
                 'informe-preventivo/view/<id:\d+>' => 'informe-preventivo/informe-preventivo/view',
                 'informe-preventivo/update/<id:\d+>' => 'informe-preventivo/informe-preventivo/update',
 
-                'ruido-vpublica' => '/ruido-vpublica/ruido-vpublica/index',
-                'ruido-vpublica/create' => 'ruido-vpublica/ruido-vpublica/create',
-                'ruido-vpublica/view/<id:\d+>' => 'ruido-vpublica/ruido-vpublica/view',
-                'ruido-vpublica/update/<id:\d+>' => 'ruido-vpublica/ruido-vpublica/update',
-
-
             ],
 
         ],
@@ -55,9 +49,6 @@ return [
       'informe-preventivo' => [
           'class' => 'frontend\modules\informePreventivo\InformePreventivo',
       ],
-      'ruido-vpublica' => [
-            'class' => 'frontend\modules\ruidoVpublica\RuidoVpublica',
-        ],
     ],
     'params' => $params,
 ];

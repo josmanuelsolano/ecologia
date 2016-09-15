@@ -49,7 +49,7 @@ AppAsset::register($this);
           'label' => 'Trámites',
           'items' =>[
             ['label' => 'Informe Preventivo', 'url' => ['/informe-preventivo/create']],
-            ['label' => 'Emisión de ruido en la vía pública', 'url' => ['/ruido-vpublica/create']],
+            ['label' => 'Emisión de ruido en la vía pública', 'url' => ['/']],
             ['label' => 'Antenas de telecomunicación', 'url' => ['/']],
             ['label' => 'Comercios y Servicios', 'url' => ['/']],
             ['label' => 'Demolición', 'url' => ['/']],
